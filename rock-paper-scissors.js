@@ -57,11 +57,13 @@ function playGame() {
     const computerSelection5 = getComputerChoice();
     console.log(playRound(humanSelection5, computerSelection5))
     if (HumanScore > ComputerScore) {
-        return "Congrats, you won the game! Your score: " + HumanScore 
+        return "Congrats, you won the game! Your score: " + HumanScore + ". Computer score: " + ComputerScore
     }
-
+    else if (HumanScore === ComputerScore) {
+        return "It's a tie! Your score: " + HumanScore + ". Computer score: " + ComputerScore
+    }
     else {
-        return "Too bad, you lost the game! Computer score: " + ComputerScore
+        return "Too bad, you lost the game! Computer score: " + ComputerScore + ". Your score: " + HumanScore
     }
 }
 
