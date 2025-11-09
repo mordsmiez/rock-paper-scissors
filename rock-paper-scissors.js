@@ -36,10 +36,36 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
 
-console.log(playRound(humanSelection, computerSelection));
+
+function playGame() {
+    const humanSelection1 = getHumanChoice();
+    const computerSelection1 = getComputerChoice();
+    console.log(playRound(humanSelection1, computerSelection1))
+
+    const humanSelection2 = getHumanChoice();
+    const computerSelection2 = getComputerChoice();
+    console.log(playRound(humanSelection2, computerSelection2))
+
+    const humanSelection3 = getHumanChoice();
+    const computerSelection3 = getComputerChoice();
+    console.log(playRound(humanSelection3, computerSelection3))
+    const humanSelection4 = getHumanChoice();
+    const computerSelection4 = getComputerChoice();
+    console.log(playRound(humanSelection4, computerSelection4))
+    const humanSelection5 = getHumanChoice();
+    const computerSelection5 = getComputerChoice();
+    console.log(playRound(humanSelection5, computerSelection5))
+    if (HumanScore > ComputerScore) {
+        return "Congrats, you won the game! Your score: " + HumanScore 
+    }
+
+    else {
+        return "Too bad, you lost the game! Computer score: " + ComputerScore
+    }
+}
+
+console.log(playGame());
 
 console.log(HumanScore)
 console.log(ComputerScore)
