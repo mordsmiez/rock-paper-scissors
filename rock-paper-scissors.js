@@ -20,7 +20,7 @@ function playRound(humanChoice, computerChoice) {
 
     if (ComputerScore < 5 && HumanScore < 5) {
         if (humanChoice.toLowerCase()===computerChoice) {
-            roundText.textContent = "It's a tie! You chose " + humanChoice.toLowerCase() + ". The computer chose " + computerChoice + "."
+            roundText.textContent = "It's a tie! You chose " + humanChoice.toLowerCase() + ". The computer chose " + computerChoice + ". Computer has " + ComputerScore + " points. You have " + HumanScore + " points."
             body.appendChild(roundText);
         }
         else if (humanChoice.toLowerCase()==="scissors" && computerChoice==="paper" 
@@ -28,12 +28,12 @@ function playRound(humanChoice, computerChoice) {
             || humanChoice.toLowerCase()==="paper" && computerChoice==="rock") {
                 HumanScore++
                 roundText.textContent = "You win this round! You chose " + humanChoice.toLowerCase() + 
-                ". The computer chose " + computerChoice + "."
+                ". The computer chose " + computerChoice + ". Computer has " + ComputerScore + " points. You have " + HumanScore + " points."
                 body.appendChild(roundText);
         }
         else if (humanChoice.toLowerCase()==="paper" && computerChoice==="scissors" || humanChoice.toLowerCase()==="scissors" && computerChoice==="rock" || humanChoice.toLowerCase()==="rock" && computerChoice==="paper") {
             ComputerScore++
-            roundText.textContent = "You lose this round! You chose " + humanChoice.toLowerCase() + ". The computer chose " + computerChoice + "."
+            roundText.textContent = "You lose this round! You chose " + humanChoice.toLowerCase() + ". The computer chose " + computerChoice + ". Computer has " + ComputerScore + " points. You have " + HumanScore + " points."
             body.appendChild(roundText);
     }
     }
